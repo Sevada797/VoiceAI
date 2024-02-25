@@ -78,15 +78,3 @@ def askAI(text):
     #print(response.text[0:(response.text.find('event: trylimit'))].replace("data: ", "").replace("\n", ""))
     speak(response.text[0:(response.text.find('event: trylimit'))].replace("data: ", "").replace("\n", ""))
 listen()
-#while True:
-    #listen()
-    #command = listen()
-    #if "exit" in command:
-    #    speak("Goodbye!")
-    #    break
-#    elif command:
-        # Add your AI logic here to process user commands and generate responses
-      
-        #response = "You said: " + command
-        #print("AI:", response)
-        #speak(response)
