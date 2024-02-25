@@ -13,7 +13,7 @@ def listen():
             try:
                 print("Recognizing...")
                 query = recognizer.recognize_google(audio)
-                #print("User said:", query)
+                print("User said:", query)
                 response = askAI(query)
                 speak(response)
             except sr.UnknownValueError:
@@ -75,6 +75,7 @@ def askAI(text):
     response = requests.post(url, headers=headers, json=data)
 
     # Print the response
-    #print(response.text[0:(response.text.find('event: trylimit'))].replace("data: ", "").replace("\n", ""))
+    print(response.text[0:(response.text.find('event: trylimit'))].replace("data: ", "").replace("\n", ""))
     speak(response.text[0:(response.text.find('event: trylimit'))].replace("data: ", "").replace("\n", ""))
 listen()
+
