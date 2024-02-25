@@ -78,4 +78,3 @@ def askAI(text):
     print(response.text[0:(response.text.find('event: trylimit'))].replace("data: ", "").replace("\n", ""))
     speak(response.text[0:(response.text.find('event: trylimit'))].replace("data: ", "").replace("\n", ""))
 listen()
-
